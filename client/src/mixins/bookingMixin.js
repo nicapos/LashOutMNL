@@ -13,7 +13,7 @@ export default {
         sessionCart.init(this.category);
 
         axios
-            .get(`/api/services/${this.category}`)
+            .get(process.env.VUE_APP_BACKEND_URL + `/api/services/${this.category}`)
             .then((response) => {
                 this.subcategories = response.data
             })

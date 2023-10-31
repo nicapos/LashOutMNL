@@ -18,7 +18,7 @@
         },
         created() {
             axios
-                .get(`/api/services`, { params: {id: this.$route.params.id} })
+                .get(process.env.VUE_APP_BACKEND_URL + `/api/services`, { params: {id: this.$route.params.id} })
                 .then((response) => {
                     console.log(response.data)
                     this.service = response.data;

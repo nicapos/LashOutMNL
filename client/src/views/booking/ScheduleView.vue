@@ -29,7 +29,7 @@
             console.log(sessionCart.getItem())
 
             axios
-                .get(`/api/getInclusions/`+ this.service.Category)
+                .get(process.env.VUE_APP_BACKEND_URL + `/api/getInclusions/`+ this.service.Category)
                 .then((response)=>{
                     this.Inclusions = response.data
                 })

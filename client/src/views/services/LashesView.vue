@@ -26,7 +26,7 @@
 
         created(){
           axios
-            .get(`/api/services/Lashes`)
+            .get(process.env.VUE_APP_BACKEND_URL + `/api/services/Lashes`)
             .then((response)=>{
                 this.subcategories = response.data
             })

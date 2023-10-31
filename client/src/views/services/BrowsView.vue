@@ -25,7 +25,7 @@
 
         created(){
           axios
-            .get(`/api/services/Brows`)
+            .get(process.env.VUE_APP_BACKEND_URL + `/api/services/Brows`)
             .then((response)=>{
                 this.subcategories = response.data
             })

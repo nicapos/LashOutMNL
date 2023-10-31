@@ -8,8 +8,19 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "@dafcoe/vue-collapsible-panel": "^0.2.0",
+    "axios": "^1.1.3",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.26.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.7",
+    "dayjs-with-plugins": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.6.7",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "v-calendar": "3.0.0-alpha.5",
+    "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

@@ -22,7 +22,7 @@
         created() {
             Object.keys(this.categories).forEach(category => {
                 axios
-                    .get(`/api/services/${category}`)
+                    .get(process.env.VUE_APP_BACKEND_URL + `/api/services/${category}`)
                     .then((response) => {
                         var subcategories = response.data;
                         var services = [];

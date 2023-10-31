@@ -21,7 +21,7 @@
         },
         mounted() {
             axios
-                .get(`/api/getInclusions/`+ this.cart.service.Category)
+                .get(process.env.VUE_APP_BACKEND_URL + `/api/getInclusions/`+ this.cart.service.Category)
                 .then((response) => {
                     this.Inclusions = response.data
                 })

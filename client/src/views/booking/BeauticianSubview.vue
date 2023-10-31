@@ -29,7 +29,7 @@
         }, */
         mounted() {
             axios
-                .get(`/api/getBeauticians/`+ this.cart.service.Service)
+                .get(process.env.VUE_APP_BACKEND_URL + `/api/getBeauticians/`+ this.cart.service.Service)
                 .then((response)=> {
                     this.Beauticians = response.data
                 })

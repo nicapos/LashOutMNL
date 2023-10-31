@@ -137,7 +137,7 @@ const router = createRouter({
 router.beforeEach(async (to, from , next) => {
   authorized = false
   if (to.matched.some(record => record.meta.requiresAuth)){
-    await axios.get(`http://localhost:3000/api/getAuthentication`)
+    await axios.get(process.env.VUE_APP_BACKEND_URL + `/api/getAuthentication`)
     .then(function(response){
     authorized = response.data
     })

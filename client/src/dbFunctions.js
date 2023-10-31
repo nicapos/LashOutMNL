@@ -7,25 +7,25 @@ class Appointment {
           
     }
     static async addAppointment (query) {
-        var url = "http://localhost:3000/api/addAppointment"
+        var url = process.env.VUE_APP_BACKEND_URL + "/api/addAppointment"
         var result = await axios.post(url, query);
         console.log(result)
         return result.data;
     }
     static uploadPayment (value){
-        var url = "http://localhost:3000/api/uploadPayment"
+        var url = process.env.VUE_APP_BACKEND_URL + "/api/uploadPayment"
         const formData = new FormData()
         formData.append('file', value)
         return axios.put (url, formData)
     } 
     static addInclusions (inclusion) {
-        var url = "http://localhost:3000/api/addInclusions"
+        var url = process.env.VUE_APP_BACKEND_URL + "/api/addInclusions"
         return axios.post(url, {
             Inclusions: inclusion
         })
     }
     static addAppointmentDate (date) {
-       var url = "http://localhost:3000/api/addChosenDate"
+       var url = process.env.VUE_APP_BACKEND_URL + "/api/addChosenDate"
        return axios.post(url, {
             chosenDate: date
         })
