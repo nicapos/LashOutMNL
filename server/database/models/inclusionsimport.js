@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost:27017/LashOutMNL")
+mongoose.connect(process.env.DB_URL)
 
 const Inclusion = require('database/models/Inclusions')
 
